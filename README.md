@@ -1,58 +1,37 @@
 
 # MyContribution
+
 Crawl all merged pull request and show on `README.md`
 
 ## Basic
 
 #### Dependencies
- * Python 3.5+
- * BeautifulSoup
+
+ - Python 3.5+
+ - request (Only in sync mode)
+ - aiohttp (Only in async mode)
 
 #### How to use
+
 Fork this repository and 
         
-        python3 contribution.py
+```bash
+python3 contribution.py <YourUserName>
+```
 
-## Contribution(***42 merged***)
- * [**akumuli/Akumuli**(★249)](https://github.com/akumuli/Akumuli) - [Add a option that allows to preallocate file space](https://github.com/akumuli/Akumuli/pull/185)
- * [**Qihoo360/pika**(★971)](https://github.com/Qihoo360/pika) - [fix memory leak](https://github.com/Qihoo360/pika/pull/98)
- * [**akumuli/Akumuli**(★249)](https://github.com/akumuli/Akumuli) - [Set meaningful number of CPU's in TcpServer configuration](https://github.com/akumuli/Akumuli/pull/184)
- * [**akumuli/Akumuli**(★249)](https://github.com/akumuli/Akumuli) - [fix to clarify the precendence](https://github.com/akumuli/Akumuli/pull/182)
- * [**Qihoo360/zeppelin**(★40)](https://github.com/Qihoo360/zeppelin) - [return statement is unnecessary](https://github.com/Qihoo360/zeppelin/pull/6)
- * [**CatKang/zeppelin-client**(★3)](https://github.com/CatKang/zeppelin-client) - [Add parallel testing](https://github.com/CatKang/zeppelin-client/pull/4)
- * [**CatKang/zeppelin-client**(★3)](https://github.com/CatKang/zeppelin-client) - [use NULL instead of unused pointer](https://github.com/CatKang/zeppelin-client/pull/3)
- * [**Qihoo360/slash**(★13)](https://github.com/Qihoo360/slash) - [Make the file descriptor limit configurable](https://github.com/Qihoo360/slash/pull/3)
- * [**Qihoo360/zeppelin**(★40)](https://github.com/Qihoo360/zeppelin) - [Make the file descriptor limit configurable](https://github.com/Qihoo360/zeppelin/pull/5)
- * [**Qihoo360/slash**(★13)](https://github.com/Qihoo360/slash) - [Support long long int](https://github.com/Qihoo360/slash/pull/2)
- * [**CatKang/zeppelin-client**(★3)](https://github.com/CatKang/zeppelin-client) - [fix compile error and the limit of ttl](https://github.com/CatKang/zeppelin-client/pull/2)
- * [**CatKang/zeppelin-client**(★3)](https://github.com/CatKang/zeppelin-client) - [support exit command for zp_manager](https://github.com/CatKang/zeppelin-client/pull/1)
- * [**Qihoo360/pika**(★971)](https://github.com/Qihoo360/pika) - [Modify test directory structure](https://github.com/Qihoo360/pika/pull/90)
- * [**Qihoo360/zeppelin**(★40)](https://github.com/Qihoo360/zeppelin) - [Makefile bug](https://github.com/Qihoo360/zeppelin/pull/4)
- * [**Qihoo360/zeppelin**(★40)](https://github.com/Qihoo360/zeppelin) - [Makefile bug](https://github.com/Qihoo360/zeppelin/pull/3)
- * [**Qihoo360/pika**(★971)](https://github.com/Qihoo360/pika) - [bugfix GEO](https://github.com/Qihoo360/pika/pull/77)
- * [**Qihoo360/nemo**(★36)](https://github.com/Qihoo360/nemo) - [To improve HLL precision](https://github.com/Qihoo360/nemo/pull/8)
- * [**Qihoo360/pika**(★971)](https://github.com/Qihoo360/pika) - [修改HLL测试文件](https://github.com/Qihoo360/pika/pull/74)
- * [**Qihoo360/pika**(★971)](https://github.com/Qihoo360/pika) - [fix bug](https://github.com/Qihoo360/pika/pull/72)
- * [**Qihoo360/nemo**(★36)](https://github.com/Qihoo360/nemo) - [fix bug](https://github.com/Qihoo360/nemo/pull/7)
- * [**Qihoo360/pika**(★971)](https://github.com/Qihoo360/pika) - [Update README.md](https://github.com/Qihoo360/pika/pull/71)
- * [**Qihoo360/evpp**(★541)](https://github.com/Qihoo360/evpp) - [typo](https://github.com/Qihoo360/evpp/pull/1)
- * [**Qihoo360/pika**(★971)](https://github.com/Qihoo360/pika) - [format code](https://github.com/Qihoo360/pika/pull/66)
- * [**Qihoo360/pika**(★971)](https://github.com/Qihoo360/pika) - [Support GEO](https://github.com/Qihoo360/pika/pull/59)
- * [**Qihoo360/pink**(★133)](https://github.com/Qihoo360/pink) - [fix bug](https://github.com/Qihoo360/pink/pull/3)
- * [**Qihoo360/pika**(★971)](https://github.com/Qihoo360/pika) - [Support hyperloglog](https://github.com/Qihoo360/pika/pull/56)
- * [**Qihoo360/nemo**(★36)](https://github.com/Qihoo360/nemo) - [Support hyperloglog](https://github.com/Qihoo360/nemo/pull/6)
- * [**onexsoft/OneValue**(★42)](https://github.com/onexsoft/OneValue) - [complete TODO](https://github.com/onexsoft/OneValue/pull/21)
- * [**onexsoft/OneValue**(★42)](https://github.com/onexsoft/OneValue) - [modify Makefile](https://github.com/onexsoft/OneValue/pull/20)
- * [**onexsoft/OneValue**(★42)](https://github.com/onexsoft/OneValue) - [remove the size of list](https://github.com/onexsoft/OneValue/pull/19)
- * [**onexsoft/OneValue**(★42)](https://github.com/onexsoft/OneValue) - [fix `ltrim` command bug](https://github.com/onexsoft/OneValue/pull/17)
- * [**onexsoft/OneValue**(★42)](https://github.com/onexsoft/OneValue) - [Improve the efficiency of list data type](https://github.com/onexsoft/OneValue/pull/16)
- * [**onexsoft/OneValue**(★42)](https://github.com/onexsoft/OneValue) - [Support for OS X and fix some warnings](https://github.com/onexsoft/OneValue/pull/15)
- * [**onexsoft/OneValue**(★42)](https://github.com/onexsoft/OneValue) - [support PFCOUNT method to Handle multiple values.](https://github.com/onexsoft/OneValue/pull/12)
- * [**onexsoft/OneValue**(★42)](https://github.com/onexsoft/OneValue) - [Use a lock for the key operation and support PFMERGE  method  to Handle multiple values.](https://github.com/onexsoft/OneValue/pull/9)
- * [**onexsoft/OneValue**(★42)](https://github.com/onexsoft/OneValue) - [Add support for HyperLogLog PFMERGE command.](https://github.com/onexsoft/OneValue/pull/8)
- * [**onexsoft/OneValue**(★42)](https://github.com/onexsoft/OneValue) - [Add the HyperLogLog algorithm as a native feature,but now only support PFADD and PFCOUNT method.](https://github.com/onexsoft/OneValue/pull/6)
- * [**onexsoft/OneValue**(★42)](https://github.com/onexsoft/OneValue) - [fix warning: ‘brdaddr’ may be used uninitialized in this function](https://github.com/onexsoft/OneValue/pull/3)
- * [**onexsoft/OneValue**(★42)](https://github.com/onexsoft/OneValue) - [fix "::read() has not been declared" error](https://github.com/onexsoft/OneValue/pull/1)
- * [**Tencent/libco**(★1,583)](https://github.com/Tencent/libco) - [fix warning](https://github.com/Tencent/libco/pull/1)
- * [**tencent-wechat/libco**(★331)](https://github.com/tencent-wechat/libco) - [fix warning](https://github.com/tencent-wechat/libco/pull/1)
- * [**tinyclub/linux-doc**(★81)](https://github.com/tinyclub/linux-doc) - [Update PLAN.md](https://github.com/tinyclub/linux-doc/pull/5)
+Default mode is ASYNC, if error happened, you can try slower `--sync` mode.
+
+For only merged PRs, use `-m` option. 
+
+For force override `README.md`, use `-f` option.
+
+Use `--help` to see full option and usage.
+
+## ContributionsCrawler
+
+- [x] [**ruanyf/es6tutorial (7085★ 3542🍴)**](https://github.com/ruanyf/es6tutorial) - [doc(arraybuff): remove/add inline-code style for some words](https://github.com/ruanyf/es6tutorial/pulls/255)
+- [x] [**ruanyf/es6tutorial (7085★ 3542🍴)**](https://github.com/ruanyf/es6tutorial) - [edit (fix typo) in arraybuff.md](https://github.com/ruanyf/es6tutorial/pulls/250)
+- [x] [7sDream/zhihu-py3 (826★ 345🍴)](https://github.com/7sDream/zhihu-py3) - [Revert "fix issue#38"](https://github.com/7sDream/zhihu-py3/pulls/40)
+- [x] [SimplyY/zhihu-rss (111★ 28🍴)](https://github.com/SimplyY/zhihu-rss) - [update windows build](https://github.com/SimplyY/zhihu-rss/pulls/24)
+- [x] [SimplyY/zhihu-rss (111★ 28🍴)](https://github.com/SimplyY/zhihu-rss) - [win build finish](https://github.com/SimplyY/zhihu-rss/pulls/22)
+- [x] [SimplyY/zhihu-rss (111★ 28🍴)](https://github.com/SimplyY/zhihu-rss) - [Build in windows](https://github.com/SimplyY/zhihu-rss/pulls/21)
