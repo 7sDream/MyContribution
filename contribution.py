@@ -412,10 +412,14 @@ class ContributionsCrawler(object):
 
     async def __test_login_async(self, session):
         _step("Login to GitHub as [{}]", self.__username)
-        resp = await session.get(self.__GITHUB_API_TEST_LOGIN)
-        await self.__get_json_or_error_async(
-            resp, prefix_message='Login failed: '
-        )
+        async with session.get(self.__GITHUB_API_TEST_LOGIN) as resp:
+            try:
+                await self.__get_json_or_error_async(
+                    resp, prefix_message='Login failed: '
+                )
+            except Exception as e:
+                session.close()
+                raise e
         _ok()
 
     async def __pr_worker(self, session, pr_url, repo_url):
