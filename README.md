@@ -14,20 +14,18 @@ Crawl all merged pull request and show on `README.md`
 #### How to use
 
 Fork this repository and 
-        
+
 ```bash
 python3 contribution.py <YourUserName>
 ```
 
 Default mode is ASYNC, if error happened, you can try slower `--sync` mode.
 
-For only merged PRs, use `-m` option. 
-
-For force override `README.md`, use `-f` option.
+For show unmerged PRs, use `-u` option.
 
 Use `--help` to see full option and usage.
 
-## ContributionsCrawler
+## Contribution
 
 - [x] [**ruanyf/es6tutorial (7085★ 3542🍴)**](https://github.com/ruanyf/es6tutorial) - [doc(arraybuff): remove/add inline-code style for some words](https://github.com/ruanyf/es6tutorial/pulls/255)
 - [x] [**ruanyf/es6tutorial (7085★ 3542🍴)**](https://github.com/ruanyf/es6tutorial) - [edit (fix typo) in arraybuff.md](https://github.com/ruanyf/es6tutorial/pulls/250)
